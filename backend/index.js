@@ -13,7 +13,8 @@ const PORT = 8081;
 app.get("/",(req,res)=>{res.send("PONG")})
 
 app.use(bodyParser.json());
-app.use(cors())
+app.use(cors({ origin: 'https://form-validator-kappa-topaz.vercel.app',
+  credentials: true}))
 
 app.use("/auth",AuthRouter);
 app.use("/products",ProductRouter);
