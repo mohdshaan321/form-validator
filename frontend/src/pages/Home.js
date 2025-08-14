@@ -31,7 +31,7 @@ function Home() {
 
     storedToken = storedToken.replace(/^"|"$/g, '');
 
-    const url = 'http://localhost:8081/products';
+    const url = 'https://form-validator-sazz.onrender.com';
     const headers = {
       Authorization: `Bearer ${storedToken}`,
       'Content-Type': 'application/json',
