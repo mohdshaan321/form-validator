@@ -10,7 +10,7 @@ require("./Models/db");;
 const PORT = 8081;
 
 
-app.get("/ping",(req,res)=>{res.send("PONG")})
+app.get("/",(req,res)=>{res.send("PONG")})
 
 app.use(bodyParser.json());
 app.use(cors())
