@@ -10,11 +10,19 @@ require("./Models/db");;
 const PORT = 8081;
 
 
-app.get("/",(req,res)=>{res.send("PONG")})
+
+app.use(cors({
+  origin: 'https://form-validator-kappa-topaz.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 
 app.use(bodyParser.json());
-app.use(cors({ origin: 'https://form-validator-kappa-topaz.vercel.app',
-  credentials: true}))
+
+app.get("/",(req,res)=>{res.send("PONG")})
+
+
 
 app.use("/auth",AuthRouter);
 app.use("/products",ProductRouter);
