@@ -22,54 +22,11 @@ function Signup() {
      setSignupInfo(copySignupInfo)
      
      }
-    //  console.log('signupInfo ->',signupInfo); 
-   
-
-          // const handleSubmit = async (e)=>{
-          //   e.preventDefault()
-          //   const{name,email,password}=signupInfo;
-          //   const url = "http://localhost:8081/auth/signup";
-            
-          //   if(!name || !email || !password){
-          //     handleError("name, email or password are required")
-          //   }
-          
-          //   try{
-          //     const response = await fetch(url,
-          //       {method:"POST",
-          //        headers:
-          //          {"Content-Type": "application/json"},
-          //          body:JSON.stringify(signupInfo)
-          //         })
-
-          //   const result = await response.json()
-          //   console.log(result);
-          //   const {message,success}=result  if(success){
-          //     handleSuccess(message)
-          //     setTimeout(() => {
-          //       navigate("/login")
-          //     }, 1000);
-          //   } else if(!success){
-          //     handleError(message)
-              
-          //    }
-
-
-          //   }
-          
-            
-          
-          
-            
-
-            
-            
-          
-          // }
+  
     const handleSubmit = async (e)=>{
           e.preventDefault();
           const{name,email,password}=signupInfo;
-          const url = "http://localhost:8081/auth/signup";
+          const url = "https://form-validator-sazz.onrender.com/auth/signup";
 
           
       if(!name || !email || !password){

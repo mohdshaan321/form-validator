@@ -25,7 +25,7 @@ function Login() {
     const handleSubmit = async (e)=>{
           e.preventDefault();
           const{email,password}=loginInfo;
-          const url = "http://localhost:8081/auth/login";
+          const url = "https://form-validator-sazz.onrender.com/auth/login";
 
           
           if(!email || !password){
