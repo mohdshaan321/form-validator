@@ -20,10 +20,6 @@ app.use(cors({
 
 app.use(bodyParser.json());
 
-app.get("/",(req,res)=>{res.send("PONG")})
-
-
-
 app.use("/auth",AuthRouter);
 app.use("/products",ProductRouter);
 
